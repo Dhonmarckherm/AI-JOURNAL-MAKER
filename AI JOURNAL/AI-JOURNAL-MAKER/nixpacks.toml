@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["python311"]
+
+[phases.install]
+cmds = ["pip install -r journal_maker/requirements_journal.txt"]
+
+[phases.build]
+cmds = ["echo 'Build phase'"]
+
+[start]
+cmd = "cd journal_maker && python journal_app.py"
